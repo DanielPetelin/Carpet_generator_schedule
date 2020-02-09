@@ -5,15 +5,11 @@ var timer;
 
 drowSin();
 
+// делаем функцию генератора ковров.
 function drowSin() {
-    y = Math.sin(x);
+    y = Math.sin(x * 2676372653164317536715276155645176341723567153761746175327);
+    x = x + 0.05;
 
-    if (x >= 400) {
-        x = 0
-    } else {
-        x = x + 0.3;
-    };
-
-    ctx.fillRect(5 * x, 100 + 20 * y, 2, 2);
-    timer = setTimeout(drowSin, 50);
+    ctx.fillRect(1.5 * x, 200 + 200 * y, 3, 3);
+    timer = setTimeout(drowSin, 0.2);
 };
